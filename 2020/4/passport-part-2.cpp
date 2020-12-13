@@ -8,17 +8,15 @@ Passport::Passport()
 
 Passport::~Passport()
 {}
-#include<iostream>//TEMPORARY//
+
 void Passport::AddField(std::string field, std::string fieldVal)
 {
-  std::cout<<"Adding "<<field<<"\t\t"<<fieldVal<<std::endl;
   this->fields.push_back(field);
   this->fieldVals.push_back(fieldVal);
 }
 
 bool Passport::IsValid()
 {
-  std::cout<<"==="<<std::endl;
   bool byr = false,
        iyr = false,
        eyr = false,
@@ -31,7 +29,6 @@ bool Passport::IsValid()
   
   for(i = 0; i < len; ++i)
   {
-    std::cout<<"Chk:"<<this->fields.at(i)<<","<<this->fieldVals.at(i)<<";"<<std::endl;
     f = this->fields.at(i);
     v = this->fieldVals.at(i);
     
